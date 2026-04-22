@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject ballPrefab;
     public Transform paddle;
+    public AudioSource audioSource;
+    public AudioClip gameover_Sound;
+
 
     public int life = 3;
 
@@ -86,6 +89,7 @@ public class GameManager : MonoBehaviour
         isGameOver = true;
 
         Debug.Log("Game Over");
+        audioSource.PlayOneShot(gameover_Sound);
 
         if (restartButton != null)
         {

@@ -6,6 +6,7 @@ public class Block : MonoBehaviour
     private int hp;       // 現在の耐久
 
     public Sprite[] damageSprites; // ダメージ段階ごとの見た目
+    public AudioSource audioSource;
     public AudioClip hitSound_1;
     public AudioClip hitSound_2;
 
