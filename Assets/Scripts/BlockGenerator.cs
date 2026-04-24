@@ -4,7 +4,7 @@ public class BlockGenerator : MonoBehaviour
 {
     public GameObject normalBlockPrefab;
     public GameObject hardBlockPrefab;
-    public int stage;
+    public int stage = 0;
 
     // ★追加：高さ調整用
     public float heightOffset = 3f;

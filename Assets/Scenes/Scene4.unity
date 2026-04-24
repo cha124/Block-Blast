@@ -129,7 +129,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 45187116838864661, guid: 66641a9e5c90257488ec3273283ead6d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 45187116838864661, guid: 66641a9e5c90257488ec3273283ead6d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -478,6 +478,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 7285240694921912909, guid: 989cc87bf2fec4f429d3ffe37d6e338e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -543,6 +547,10 @@ PrefabInstance:
       propertyPath: restartButton
       value: 
       objectReference: {fileID: 1858920450}
+    - target: {fileID: 4832259290239759307, guid: 5c623b8d522a22e499b861faa9fbd879, type: 3}
+      propertyPath: restartButtonText
+      value: 
+      objectReference: {fileID: 1300267484}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -646,7 +654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7148194998398874310, guid: 328ecdaaa6975b942b58e353519abd2b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: -14
       objectReference: {fileID: 0}
     - target: {fileID: 7148194998398874310, guid: 328ecdaaa6975b942b58e353519abd2b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -705,6 +713,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 934702611756075817, guid: 1bd2ef02664bdad49a407f774fd32cef, type: 3}
   m_PrefabInstance: {fileID: 306585931}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1300267484 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8068159173544627614, guid: 989cc87bf2fec4f429d3ffe37d6e338e, type: 3}
+  m_PrefabInstance: {fileID: 370148607}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &1517876629
 PrefabInstance:
   m_ObjectHideFlags: 0

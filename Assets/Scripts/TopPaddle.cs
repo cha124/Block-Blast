@@ -4,7 +4,12 @@ public class TopPaddle : MonoBehaviour
 {
     public Transform bottomPaddle; // 下パドル参照
     public float yOffset = 8f;     // 上にどれだけ離すか
+    private Vector3 originalScale;
 
+    void Start()
+    {
+        originalScale = transform.localScale;
+    }
     void Update()
     {
         if (bottomPaddle == null) return;
@@ -15,5 +20,21 @@ public class TopPaddle : MonoBehaviour
             yOffset,
             transform.position.z
         );
+
+        if (Paddle.isPowered_large_paddle)
+        {
+            // 最初の1回だけ2倍にする
+            if (transform.localScale == originalScale)
+            {
+                transform.localScale = originalScale * 2f;
+            }
+
+            Paddle.largeTimer += Time.deltaTime;
+
+            if (Paddle.largeTimer >= Paddle.largeDuration)
+            {
+                transform.localScale = originalScale;      
+            }
+        }
     }
 }

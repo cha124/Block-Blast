@@ -35,10 +35,4 @@ public class Item : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    void ApplyEffect()
-    {
-        // ★今は空でOK
-        Debug.Log("アイテム取得！");
-    }
 }

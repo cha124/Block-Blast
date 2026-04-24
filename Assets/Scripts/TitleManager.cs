@@ -3,13 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class TitleManager : MonoBehaviour
 {
-    public AudioClip bgm;
-    
-    void Start()
-    {
-        AudioSource.PlayClipAtPoint(bgm, transform.position);
-    }
-
     public void StartGame()
     {
         SceneManager.LoadScene(2); // ステージ1
@@ -17,6 +10,6 @@ public class TitleManager : MonoBehaviour
 
     public void OpenSetting()
     {
-        SceneManager.LoadScene(0); // ステージ1
+        SceneManager.LoadScene(1);
     }
 }

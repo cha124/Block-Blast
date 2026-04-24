@@ -8,14 +8,13 @@ public class GameManager : MonoBehaviour
 
     public GameObject ballPrefab;
     public Transform paddle;
-    public AudioSource audioSource;
-    public AudioClip gameover_Sound;
-
 
     public int life = 3;
+    public static int sceneIndex;
 
     void Start()
     {
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
         if (restartButton != null)
         {
             restartButton.SetActive(false);
@@ -26,10 +25,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-      //   if (Input.GetKeyDown(KeyCode.A))
-      //  {
-       // }
-
         if (isGameOver) return;
 
         // ▼ ステージクリア
@@ -65,7 +60,6 @@ public class GameManager : MonoBehaviour
 
         GameObject newBall = Instantiate(ballPrefab);
 
-        newBall.transform.position = paddle.position + new Vector3(0, 0.6f, 0);
 
         Ball ballScript = newBall.GetComponent<Ball>();
 
@@ -89,7 +83,6 @@ public class GameManager : MonoBehaviour
         isGameOver = true;
 
         Debug.Log("Game Over");
-        audioSource.PlayOneShot(gameover_Sound);
 
         if (restartButton != null)
         {

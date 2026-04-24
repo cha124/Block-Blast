@@ -49,8 +49,14 @@ public class Ball : MonoBehaviour
                 Debug.LogError("paddle が設定されていません");
                 return;
             }
-
-            transform.position = paddle.position + new Vector3(0, 0.6f, 0);
+            
+            if(GameManager.sceneIndex != 8)
+            {
+                transform.position = paddle.position + new Vector3(0, 0.6f, 0);
+            }else{
+                transform.position = paddle.position*0.9f;
+            }
+            
             rb.linearVelocity = Vector2.zero;
 
             if (Input.GetKeyDown(KeyCode.Space))

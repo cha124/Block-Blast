@@ -1,10 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class DifficultyManager : MonoBehaviour
 {
     public static float ballSpeed = 10f;
     public static float dropRate = 0.3f;
+
+
 
     public void SetEasy()
     {
@@ -32,6 +36,11 @@ public class DifficultyManager : MonoBehaviour
 
     public void Back()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
+    }
+
+    public void ToggleFullscreen()
+    {
+        Screen.fullScreen = !Screen.fullScreen;
     }
 }
