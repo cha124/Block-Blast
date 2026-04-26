@@ -8,6 +8,13 @@ public class DifficultyManager : MonoBehaviour
     public static float ballSpeed = 10f;
     public static float dropRate = 0.3f;
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Screen.fullScreen = !Screen.fullScreen;
+        }
+    }
 
 
     public void SetEasy()
@@ -37,10 +44,5 @@ public class DifficultyManager : MonoBehaviour
     public void Back()
     {
         SceneManager.LoadScene(0);
-    }
-
-    public void ToggleFullscreen()
-    {
-        Screen.fullScreen = !Screen.fullScreen;
     }
 }

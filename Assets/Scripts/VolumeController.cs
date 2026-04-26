@@ -5,8 +5,7 @@ using UnityEngine.Audio;
 public class VolumeController : MonoBehaviour
 {
     public Slider slider;
-    public AudioMixer mixer;
-    public string volumeParameter = "MasterVolume";
+
 
     void Awake()
     {
@@ -15,21 +14,12 @@ public class VolumeController : MonoBehaviour
 
         // UIに反映
         slider.SetValueWithoutNotify(volume);
-
-        // 音量に反映
-        ApplyVolume(volume);
     }
 
     public void OnSliderChanged(float value)
     {
         Debug.Log(value);
-        ApplyVolume(value);
+        AudioListener.volume = value;
         PlayerPrefs.SetFloat("Volume", value);
-    }
-
-    void ApplyVolume(float value)
-    {
-        float v = Mathf.Clamp(value, 0.0001f, 1f);
-        mixer.SetFloat(volumeParameter, Mathf.Log10(v) * 20);
     }
 }
