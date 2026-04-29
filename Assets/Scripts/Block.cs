@@ -2,20 +2,28 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-    public int maxHp = 1; // 最大耐久
-    private int hp;       // 現在の耐久
+    public int maxHp = 1;
+    private int hp;
 
-    public Sprite[] damageSprites; // ダメージ段階ごとの見た目
+    public Sprite[] damageSprites;
     public AudioSource audioSource;
     public AudioClip hitSound_1;
     public AudioClip hitSound_2;
 
     private SpriteRenderer sr;
 
-    // ▼ アイテム関連（ここが今回の重要ポイント）
-    public GameObject[] itemPrefabs; // 複数のアイテムPrefabを登録
+    // ▼ アイテム関連
+    public GameObject[] itemPrefabs;
     [Range(0f, 1f)]
-    public float dropChance = 0.3f; // ドロップ確率
+    public float dropChance = 0.3f;
+
+    // ▼ ブロックごとの反射角
+    [Header("Ball Reflection")]
+    [Range(0f, 89f)]
+    public float reflectMinAngle = 15f;
+
+    [Range(0f, 89f)]
+    public float reflectMaxAngle = 75f;
 
     void Start()
     {
@@ -55,12 +63,10 @@ public class Block : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        // ▼ ヒット音
         AudioSource.PlayClipAtPoint(hitSound_1, transform.position);
 
         hp -= damage;
 
-        // ▼ 見た目変更
         if (damageSprites != null && damageSprites.Length > 0)
         {
             int index = maxHp - hp - 1;
@@ -71,7 +77,6 @@ public class Block : MonoBehaviour
             }
         }
 
-        // ▼ 破壊処理
         if (hp <= 0)
         {
             if (maxHp == 2)
@@ -79,7 +84,7 @@ public class Block : MonoBehaviour
                 AudioSource.PlayClipAtPoint(hitSound_2, transform.position);
             }
 
-            TryDropItem(); // ★破壊時にドロップ
+            TryDropItem();
             Destroy(gameObject);
         }
     }

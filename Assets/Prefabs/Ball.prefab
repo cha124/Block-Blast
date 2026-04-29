@@ -86,7 +86,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3603556060819865620, guid: 9f6cf765618348a45ae9fe52ba5762af, type: 3}
-  m_Color: {r: 0.53396225, g: 0.90496486, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -142,6 +142,17 @@ MonoBehaviour:
   limitX: 15
   limitY: 9
   hitSound_1: {fileID: 8300000, guid: d507b5766a1b7a9448800212f944ae7f, type: 3}
+  aimLine: {fileID: 0}
+  aimMask:
+    serializedVersion: 2
+    m_Bits: 0
+  aimMinAngle: 15
+  aimMaxAngle: 75
+  aimMaxBounces: 5
+  aimRayLength: 30
+  aimOffset: 0.05
+  defaultBlockMinAngle: 15
+  defaultBlockMaxAngle: 75
 --- !u!58 &1587187650916330455
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -286,7 +297,7 @@ TrailRenderer:
       m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 3
-    numCornerVertices: 0
+    numCornerVertices: 3
     numCapVertices: 0
     alignment: 0
     textureMode: 0

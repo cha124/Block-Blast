@@ -19,25 +19,23 @@ public class DifficultyManager : MonoBehaviour
 
     public void SetEasy()
     {
-        DifficultyManager.ballSpeed = 10f;
         DifficultyManager.dropRate = 0.3f;
     }
 
     public void SetNormal()
     {
-        DifficultyManager.ballSpeed = 15f;
         DifficultyManager.dropRate = 0.2f;
     }
 
     public void SetHard()
     {
-        DifficultyManager.ballSpeed = 20f;
-        DifficultyManager.dropRate = 0.1f;
+        DifficultyManager.ballSpeed = 12f;
+        DifficultyManager.dropRate = 0.0f;
     }
 
     public void SetExtreme()
     {
-        DifficultyManager.ballSpeed = 30f;
+        DifficultyManager.ballSpeed = 15f;
         DifficultyManager.dropRate = 0.0f;
     }
 

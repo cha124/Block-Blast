@@ -48,9 +48,7 @@ MonoBehaviour:
   restartButton: {fileID: 0}
   ballPrefab: {fileID: 6980048031730367008, guid: a821bb78463681444a8dcf73c96c3bf3, type: 3}
   paddle: {fileID: 934702611756075817, guid: 1bd2ef02664bdad49a407f774fd32cef, type: 3}
-  audioSource: {fileID: 2584537697458331560}
-  gameover_Sound: {fileID: 8300000, guid: ed3c404998fb917489c3457d7d9e17d4, type: 3}
-  life: 3
+  lifeUI: {fileID: 382839631733370087, guid: dbf86aacf0f4e5b4aa59aa8ea6f9a65c, type: 3}
 --- !u!82 &2584537697458331560
 AudioSource:
   m_ObjectHideFlags: 0

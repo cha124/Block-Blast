@@ -13,7 +13,7 @@ public class TitleManager : MonoBehaviour
     
     public void StartGame()
     {
-        SceneManager.LoadScene(2); // ステージ1
+        SceneManager.LoadScene(10); // ステージ1
     }
 
 
@@ -21,4 +21,6 @@ public class TitleManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    
 }

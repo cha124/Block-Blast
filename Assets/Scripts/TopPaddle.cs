@@ -28,13 +28,8 @@ public class TopPaddle : MonoBehaviour
             {
                 transform.localScale = originalScale * 2f;
             }
-
-            Paddle.largeTimer += Time.deltaTime;
-
-            if (Paddle.largeTimer >= Paddle.largeDuration)
-            {
-                transform.localScale = originalScale;      
+        }else{
+                transform.localScale = originalScale;
             }
-        }
     }
 }
